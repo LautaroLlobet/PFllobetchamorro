@@ -1,0 +1,556 @@
+@charset "UTF-8";
+@import url("https://use.typekit.net/bps6rzl.css");
+/*maps de colores*/
+/*extend*/
+.contenedor h4, body main .contenedor .row, body main .contenedor p {
+  display: flex;
+  justify-content: center;
+}
+
+body main .contenedor .cartas .carta-cf a div, body main .contenedor .cartas .carta-wl a div, body main .contenedor .cartas .carta-pw a div, body main .contenedor .cartas .carta-cf, body main .contenedor .cartas .carta-wl, body main .contenedor .cartas .carta-pw {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/*mixings*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+/*head y nav
+*/
+body header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: rgb(243, 187, 2);
+}
+body header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header div .encabezado {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+body header div .encabezado h1 {
+  font-family: "ingra", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+body header div .encabezado h2 {
+  font-family: "ingra-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+}
+body header div .menubar {
+  display: flex;
+  justify-content: flex-end;
+}
+body header div .menubar div .offcanvas {
+  background-color: rgb(243, 187, 2);
+}
+body header div .menubar div .offcanvas h3, body header div .menubar div .offcanvas a {
+  font-family: "ingra-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+body header div .menubar div .offcanvas h3 {
+  text-shadow: 1px 1px 3px white;
+  color: black;
+  font-size: 30px;
+}
+body header div .menubar div .offcanvas a {
+  text-shadow: 1px 1px 3px black;
+  color: white;
+  font-size: 20px;
+}
+body header div .menubar div .offcanvas a:hover {
+  color: black;
+  text-shadow: 1px 1px 3px white;
+}
+body header div .menubar div .offcanvas a:hover h3 {
+  transform: scale(2);
+  transition: all 2s;
+}
+body header div .menubar div .offcanvas .dropdown-menu {
+  background-color: black;
+}
+body header div .menubar div .offcanvas .dropdown-menu .dropdown-item {
+  color: rgb(243, 187, 2);
+}
+body header div .menubar div .offcanvas .dropdown-menu a:hover {
+  background-color: orange;
+  color: black;
+}
+body header div .boton-menu:hover .navbar-toggler {
+  border: 5px solid black;
+  scale: 1.2;
+  transition: all 1s;
+}
+
+/*la parte del main index*/
+body main .contenedor {
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+body main .contenedor h3 {
+  font-family: "ingra-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: black;
+  text-align: center;
+}
+body main .contenedor p {
+  font-family: "ingra-condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+}
+body main .contenedor .cartas {
+  margin-top: 20px;
+}
+body main .contenedor .cartas .carta-cf {
+  background-image: url(../imagenes/crossfit/chica-barra.jpg);
+}
+body main .contenedor .cartas .carta-wl {
+  background-image: url(../imagenes/weighlifting/weightlifting.jpg);
+}
+body main .contenedor .cartas .carta-pw {
+  background-image: url(../imagenes/powerlifting/deadlift-chica.jpg);
+}
+body main .contenedor .cartas .carta-cf, body main .contenedor .cartas .carta-wl, body main .contenedor .cartas .carta-pw {
+  height: 300px;
+  background-color: gray;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  border-style: outset;
+}
+body main .contenedor .cartas .carta-cf a, body main .contenedor .cartas .carta-wl a, body main .contenedor .cartas .carta-pw a {
+  text-decoration: none;
+  color: black;
+}
+body main .contenedor .cartas .carta-cf a div, body main .contenedor .cartas .carta-wl a div, body main .contenedor .cartas .carta-pw a div {
+  width: 200px;
+  height: 30px;
+  background-color: rgb(9, 161, 103);
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+body main .contenedor .cartas .carta-cf a div h4, body main .contenedor .cartas .carta-wl a div h4, body main .contenedor .cartas .carta-pw a div h4 {
+  font-size: 15px;
+  font-family: "ingra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-self: flex-end;
+}
+body main .contenedor .cartas .carta-cf a a:hover, body main .contenedor .cartas .carta-wl a a:hover, body main .contenedor .cartas .carta-pw a a:hover {
+  color: white;
+}
+body main .contenedor .cartas .carta-cf div:hover, body main .contenedor .cartas .carta-wl div:hover, body main .contenedor .cartas .carta-pw div:hover {
+  background-color: black;
+  transform: scale(1.5);
+  transition: all 1s;
+}
+body main .contenedor .cartas .carta-cf div:hover h4, body main .contenedor .cartas .carta-wl div:hover h4, body main .contenedor .cartas .carta-pw div:hover h4 {
+  color: white;
+}
+body main .contenedor .row h3 {
+  font-size: 25px;
+}
+body main .contenedor .galeria {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 80%);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 10px;
+  grid-template-areas: "alan" "mujer" "alancito" "lupe" "hombre" "jime";
+}
+body main .contenedor .galeria .imagen {
+  width: 100%;
+  border-radius: 15px;
+}
+body main .contenedor .galeria .imagen1 {
+  grid-area: alan;
+}
+body main .contenedor .galeria .imagen2 {
+  grid-area: mujer;
+}
+body main .contenedor .galeria .imagen3 {
+  grid-area: hombre;
+}
+body main .contenedor .galeria .imagen4 {
+  grid-area: lupe;
+}
+body main .contenedor .galeria .imagen5 {
+  grid-area: alancito;
+}
+body main .contenedor .galeria .imagen6 {
+  grid-area: jime;
+}
+
+/* hacer la pagina de crosfit y despues cambiarla al import de crft*/
+body main div section .seccion-cf {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  border: 10px solid cadetblue;
+  border-radius: 20px;
+}
+body main div section .seccion-cf .instagram-media {
+  display: flex;
+  align-self: center;
+  border-radius: 15px;
+  background-color: cadetblue;
+  padding-bottom: 10px;
+}
+body main div section .seccion-cf div {
+  padding-top: 10px;
+  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+body main div section .seccion-cf div img {
+  width: 100%;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+body main div section .seccion-cf div p {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+}
+body .carrete {
+  width: 100%;
+  z-index: 0;
+  margin: auto;
+  margin-top: 20px;
+  border: white 10px solid;
+}
+body .carrete .carousel-item {
+  border-radius: 20px;
+}
+body .carrete .carousel-item:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+/*
+pagina weighlifting
+*/
+.seccion-wl {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  border: 10px black solid;
+  border-radius: 20px;
+}
+.seccion-wl .instagram-media {
+  display: flex;
+  align-self: center;
+  border-radius: 15px;
+  background-color: black;
+  padding-bottom: 10px;
+}
+.seccion-wl div {
+  padding-top: 10px;
+  background-color: rgba(241, 166, 2, 0.774);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 10px;
+}
+.seccion-wl div img {
+  width: 100%;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+.seccion-wl div p {
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+/*
+pagina powerlifting
+*/
+.seccion-pl {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: center;
+  border: 10px solid brown;
+  border-radius: 20px;
+}
+.seccion-pl .instagram-media {
+  display: flex;
+  align-self: center;
+  border-radius: 15px;
+  background-color: red;
+  padding-bottom: 10px;
+}
+.seccion-pl div {
+  padding-top: 10px;
+  background-color: rgba(179, 34, 34, 0.671);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.seccion-pl div img {
+  width: 100%;
+  border-radius: 20px;
+  padding-bottom: 20px;
+}
+.seccion-pl div .info {
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+/* pagina sobre mi*/
+.contenedor .info-perfil {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  border-radius: 15px;
+  border: 15px solid rgb(9, 161, 103);
+  background-color: rgb(9, 161, 103);
+}
+.contenedor .info-perfil .foto-perfil {
+  width: 100%;
+}
+.contenedor .info-perfil .perfil {
+  display: inline;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  color: white;
+}
+.contenedor h4 {
+  font-family: "ingra", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.videoyoutube {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/*la parte del footer*/
+body footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: black;
+  border: 10px rgba(241, 166, 2, 0.774) solid;
+  word-spacing: 40px;
+  text-align: center;
+}
+body footer .redes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1f);
+  grid-gap: 10px;
+  justify-items: center;
+}
+body footer .redes a {
+  width: 50px;
+}
+body footer .fa-brands {
+  font-size: 50px;
+  color: rgba(241, 166, 2, 0.774);
+  margin: 10px;
+}
+body footer .fa-brands:hover {
+  color: aliceblue;
+  transform: rotate(360deg);
+  transition-duration: 1.5s;
+}
+
+a.arriba {
+  color: aliceblue;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background-color: rgba(241, 166, 2, 0.774);
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+}
+
+a.arriba:hover {
+  transform: rotate(360deg);
+  scale: 1.3;
+  transition-duration: 1s;
+}
+
+/*
+hacer media queries para cambiar los tamanios de los cuadros segun el tamanio de ventana sm md o lg
+*/
+@media only screen and (min-width: 768px) {
+  body main div section .seccion-cf div .info, body main div section .seccion-wl div .info, body main div section .seccion-pl div .info {
+    width: 80%;
+  }
+  body .carrete {
+    width: 80%;
+  }
+  body .carrete img {
+    border-radius: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body main .contenedor .galeria {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-template-areas: "alan alan" "alan alan" "mujer alancito" "lupe hombre" "jime jime" "jime jime";
+  }
+  body main .contenedor .galeria .imagen1 {
+    grid-area: alan;
+  }
+  body main .contenedor .galeria .imagen2 {
+    grid-area: mujer;
+  }
+  body main .contenedor .galeria .imagen3 {
+    grid-area: hombre;
+  }
+  body main .contenedor .galeria .imagen4 {
+    grid-area: lupe;
+  }
+  body main .contenedor .galeria .imagen5 {
+    grid-area: alancito;
+  }
+  body main .contenedor .galeria .imagen6 {
+    grid-area: jime;
+  }
+  body footer .redes {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+/*
+Fuentes añadidas:
+Ingra Regular
+font-family: "ingra", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Medium
+font-family: "ingra", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Bold
+font-family: "ingra", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra ExtraBold
+font-family: "ingra", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Book
+font-family: "ingra-2", sans-serif;
+font-weight: 300;
+font-style: normal;
+Ingra SemiBold
+font-family: "ingra-2", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Regular
+font-family: "ingra-condensed", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd Medium
+font-family: "ingra-condensed", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Bold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Cd ExtraBold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Cd Book
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd SemiBold
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+Ingra Wd Regular
+font-family: "ingra-wide", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd Medium
+font-family: "ingra-wide", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Wd Bold
+font-family: "ingra-wide", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Wd ExtraBold
+font-family: "ingra-wide", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Wd Book
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd SemiBold
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+*/
+
+/*# sourceMappingURL=style.css.map */

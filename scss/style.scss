@@ -1,0 +1,657 @@
+@import url("https://use.typekit.net/bps6rzl.css");
+
+/*maps de colores*/
+
+$colores:(fondopag:black,
+          fondocontenedor:white,
+          fondocartas:gray,
+          verde:rgb(9, 161, 103),
+          crossfit:cadetblue,
+          weightlifting:rgba(241, 166, 2, 0.774),
+          powerlifting:rgba(179, 34, 34, 0.671),
+          );
+
+
+/*extend*/
+
+%flex-content-center{
+    display: flex;
+    justify-content: center;
+};
+
+%flex-center-end{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*mixings*/
+
+@mixin flex($display,$direction,$content){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $content;
+};
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: map-get($colores,fondopag);
+    color: white;
+}
+
+/*head y nav
+*/
+
+body {
+    header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(243, 187, 2);
+    div{
+    @include flex(flex,row,space-between);
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        h1{
+            font-family: "ingra", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+        h2{
+            font-family: "ingra-condensed", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: black; 
+        }
+    }
+    .menubar{
+        display: flex;
+        justify-content: flex-end;
+
+        div .offcanvas{
+            background-color: rgba(243, 187, 2, 1);
+            h3,a{
+            font-family: "ingra-condensed", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+                
+            }
+            h3{
+                text-shadow: 1px 1px 3px white;
+                color: black;
+                font-size: 30px;
+            }
+            a{
+                text-shadow: 1px 1px 3px black;
+                color: white;
+                font-size: 20px;
+            }
+            a:hover{
+                color: black;
+                text-shadow: 1px 1px 3px white;
+                h3{
+                transform: scale(2);
+                transition: all 2s;}
+            }
+            .dropdown-menu{
+                background-color: black;
+                .dropdown-item{
+                    color: rgba(243, 187, 2, 1);
+                }
+                a:hover{
+                    background-color: orange;
+                    color: black;}
+            
+            }
+        }
+    }
+    .boton-menu:hover{
+        .navbar-toggler
+        {
+        border: 5px solid black;
+        scale: 1.2;
+        transition:all 1s;
+    }}
+}
+}
+}
+
+
+
+/*la parte del main index*/
+
+body {
+    main{
+    .contenedor{
+        width: 90%;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: map-get($colores, fondocontenedor);
+        color: black;
+        border-radius: 15px;
+        padding: 20px;
+        @include flex(flex,column,center);
+        align-content: center;
+        h3{
+            font-family: "ingra-condensed", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: black;
+            text-align: center;
+        }
+        p{
+            font-family: "ingra-condensed", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: black;
+            @extend %flex-content-center;
+        }
+        .cartas{
+            margin-top: 20px;
+                .carta-cf{
+                    background-image: url(../imagenes/crossfit/chica-barra.jpg);
+                }
+                .carta-wl{
+                    background-image: url(../imagenes/weighlifting/weightlifting.jpg);
+                }
+                .carta-pw{
+                    background-image: url(../imagenes/powerlifting/deadlift-chica.jpg);
+                }
+                .carta-cf,.carta-wl,.carta-pw{
+                    height: 300px;
+                    background-color: map-get($colores,fondocartas);
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 15px;
+                    border-style:outset;
+                    @extend%flex-center-end;
+                    a{  
+                            text-decoration: none;
+                            color: black;                                
+                            div{
+                                width: 200px;
+                                height: 30px;
+                                background-color: map-get($colores,verde);
+                                margin-bottom: 10px;
+                                border-radius: 15px;
+                                @extend%flex-center-end;                               
+
+                                h4{
+                                font-size: 15px;
+                                font-family: "ingra", sans-serif;
+                                font-weight: 400;
+                                font-style: normal;
+                                display: flex;
+                                align-self: flex-end;
+                                }
+                            
+                        }
+                        a:hover{
+                            color: white;
+                        }
+                    }
+                    div:hover{
+                        background-color: map-get($colores,fondopag);
+                        h4{
+                            color: white;
+                        }
+                        transform: scale(1.5);
+                        transition: all 1s;
+                    }
+                }
+            
+        };
+        .row{
+            @extend%flex-content-center;
+            h3{
+                font-size: 25px ;
+            }
+        }
+        
+
+
+        .galeria{
+            width: 100%;
+            height: auto;
+            margin: auto;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(1,80%);
+            grid-template-rows: repeat(6,1fr);
+            grid-gap: 10px;
+            grid-template-areas: 
+                "alan"
+                "mujer"
+                "alancito"
+                "lupe"
+                "hombre"
+                "jime"    
+            ;
+            .imagen{
+                width: 100%;
+                border-radius: 15px;
+            }
+        
+        .imagen1{
+            grid-area: alan;
+        }
+        
+        .imagen2{
+            grid-area: mujer;
+        }
+        
+        .imagen3{
+            grid-area: hombre;
+        }
+        
+        .imagen4{
+            grid-area: lupe;
+        }
+        
+        .imagen5{
+            grid-area: alancito;
+        }
+        
+        .imagen6{
+            grid-area: jime;
+        }
+    }
+        
+}
+}
+}
+
+/* hacer la pagina de crosfit y despues cambiarla al import de crft*/
+
+body{
+    main{
+        div{
+            section{
+            .seccion-cf{
+                @include flex(flex,row-reverse,center);
+                align-content: center;
+                border: 10px solid map-get($colores,crossfit);
+                border-radius: 20px;
+                .instagram-media{
+                    display: flex;
+                    align-self: center;
+                    border-radius: 15px;
+                    background-color: cadetblue;
+                    padding-bottom: 10px;
+                }
+                div{
+                    padding-top: 10px;
+                    background-color: map-get($colores,crossfit);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    img{
+                        width: 100%;
+                        border-radius: 20px;
+                        padding-bottom: 20px;
+                };
+                p{  
+                    width: 100%;
+                    color: white;
+                    font-size: 20px;
+                    padding-left: 20px;
+                }
+            }
+            }
+        }
+        }
+    }
+    .carrete{
+        width: 100%;
+        z-index: 0;
+        margin: auto;
+        margin-top: 20px;
+        border: white 10px solid;        
+        .carousel-item{
+            border-radius: 20px;
+        }
+        .carousel-item:hover{
+            transform: scale(1.2);
+            transition-duration: 1s;
+        }
+    }
+}
+
+/*
+pagina weighlifting
+*/
+
+.seccion-wl{
+    @include flex(flex,row-reverse,center);
+    align-content: center;
+    border: 10px map-get($colores,fondopag) solid;
+    border-radius: 20px;
+    .instagram-media{
+        display: flex;
+        align-self: center;
+        border-radius: 15px;
+        background-color: black;
+        padding-bottom: 10px;
+    }
+    div{
+        padding-top: 10px;
+        background-color: map-get($colores,weightlifting);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        border-radius: 10px;
+        img{
+            width: 100%;
+            border-radius: 20px;
+            padding-bottom: 20px;
+    };
+    p{  
+        width: 100%;
+        color: black;
+        font-size: 20px;
+        padding-left: 20px
+    }
+}
+}
+
+/*
+pagina powerlifting
+*/
+
+.seccion-pl{
+    @include flex(flex,row-reverse,center);
+    align-content: center;
+    border: 10px solid brown;
+    border-radius: 20px;
+    .instagram-media{
+        display: flex;
+        align-self: center;
+        border-radius: 15px;
+        background-color: red;
+        padding-bottom: 10px;
+    }
+    div{
+        padding-top: 10px;
+        background-color: map-get($colores,powerlifting);
+        @include flex(flex,column,center);
+        align-content: center;
+        img{
+            width: 100%;
+            border-radius: 20px;
+            padding-bottom: 20px;
+    };
+    .info{  
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+}
+}
+
+/* pagina sobre mi*/
+
+.contenedor{
+.info-perfil{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    border-radius: 15px;
+    border: 15px solid map-get($colores,verde);
+    background-color: map-get($colores,verde);;
+    .foto-perfil{
+        width: 100%;
+    }
+    .perfil{
+        display: inline;      
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 90%;
+        color: white;
+    }
+}
+h4{
+    font-family: "ingra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    @extend%flex-content-center;
+}
+}
+
+.videoyoutube{
+    
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    
+}
+
+/*la parte del footer*/
+
+body{
+    footer{
+        
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+    background-color: map-get($colores,fondopag);
+    border: 10px map-get($colores,weightlifting) solid;
+    word-spacing: 40px;
+    text-align: center;
+
+
+.redes{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1f);
+    grid-gap: 10px;
+    justify-items: center;
+}
+
+.redes a{
+    width: 50px;
+}
+
+
+.fa-brands{
+font-size: 50px;
+color: map-get($colores,weightlifting);
+margin: 10px;
+}
+.fa-brands:hover{
+    color: aliceblue;
+    transform: rotate(360deg);
+    transition-duration: 1.5s;
+}
+}
+}
+
+a.arriba{
+color: aliceblue;
+position: fixed;
+right: 40px;
+bottom: 40px;
+background-color: map-get($colores,weightlifting);
+font-size: 40px;
+width: 40px;
+height: 40px;
+text-align: center;
+border-radius: 50%;
+line-height: 40px;
+}
+a.arriba:hover{
+    transform: rotate(360deg);
+    scale: 1.3;
+    transition-duration: 1s;
+}
+
+/*
+hacer media queries para cambiar los tamanios de los cuadros segun el tamanio de ventana sm md o lg
+*/
+@media only screen and (min-width: 768px) {
+    body{
+        main{
+            div{
+                section{
+                    .seccion-cf,.seccion-wl,.seccion-pl{
+                        div{
+                            .info{
+                                width: 80%;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    .carrete{
+        width: 80%;
+        img{
+            border-radius: 20px;
+        }
+    }
+    };
+    
+};
+
+@media only screen and (min-width: 1024px) {
+    
+    body{
+        main{
+            .contenedor{
+                    .galeria{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2,40%);
+        grid-template-rows: repeat(6,1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+            "alan alan"
+            "alan alan"
+            "mujer alancito"
+            "lupe hombre"
+            "jime jime"
+            "jime jime"    
+        ;
+    
+    .imagen1{
+        grid-area: alan;
+    }
+    
+    .imagen2{
+        grid-area: mujer;
+    }
+    
+    .imagen3{
+        grid-area: hombre;
+    }
+    
+    .imagen4{
+        grid-area: lupe;
+    }
+    
+    .imagen5{
+        grid-area: alancito;
+    }
+    
+    .imagen6{
+        grid-area: jime;
+    }
+    }}}
+    footer{
+        .redes{
+        display: flex;
+        justify-content: space-evenly;
+    }}
+}}
+
+/*
+Fuentes añadidas:
+Ingra Regular
+font-family: "ingra", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Medium
+font-family: "ingra", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Bold
+font-family: "ingra", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra ExtraBold
+font-family: "ingra", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Book
+font-family: "ingra-2", sans-serif;
+font-weight: 300;
+font-style: normal;
+Ingra SemiBold
+font-family: "ingra-2", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Regular
+font-family: "ingra-condensed", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd Medium
+font-family: "ingra-condensed", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Bold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Cd ExtraBold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Cd Book
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd SemiBold
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+Ingra Wd Regular
+font-family: "ingra-wide", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd Medium
+font-family: "ingra-wide", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Wd Bold
+font-family: "ingra-wide", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Wd ExtraBold
+font-family: "ingra-wide", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Wd Book
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd SemiBold
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+*/
