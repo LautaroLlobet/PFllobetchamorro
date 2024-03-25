@@ -1,0 +1,28 @@
+.contenedor{
+    .info-perfil{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        border-radius: 15px;
+        border: 15px solid map-get($colores,verde);
+        background-color: map-get($colores,verde);;
+        .foto-perfil{
+            width: 100%;
+        }
+        .perfil{
+            display: inline;      
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 90%;
+            color: white;
+        }
+    }
+    h4{
+        font-family: "ingra", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        @extend%flex-content-center;
+    }
+    }

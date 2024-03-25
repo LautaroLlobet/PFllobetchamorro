@@ -1,0 +1,54 @@
+body{
+    main{
+        div{
+            section{
+            .seccion-cf{
+                @include flex(flex,row-reverse,center);
+                align-content: center;
+                border: 10px solid map-get($colores,crossfit);
+                border-radius: 20px;
+                .instagram-media{
+                    display: flex;
+                    align-self: center;
+                    border-radius: 15px;
+                    background-color: cadetblue;
+                    padding-bottom: 10px;
+                }
+                div{
+                    padding-top: 10px;
+                    background-color: map-get($colores,crossfit);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    img{
+                        width: 100%;
+                        border-radius: 20px;
+                        padding-bottom: 20px;
+                };
+                p{  
+                    width: 100%;
+                    color: white;
+                    font-size: 20px;
+                    padding-left: 20px;
+                }
+            }
+            }
+        }
+        }
+    }
+    .carrete{
+        width: 100%;
+        z-index: 0;
+        margin: auto;
+        margin-top: 20px;
+        border: white 10px solid;        
+        .carousel-item{
+            border-radius: 20px;
+        }
+        .carousel-item:hover{
+            transform: scale(1.2);
+            transition-duration: 1s;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@media only screen and (min-width: 768px) {
+    body{
+        main{
+            div{
+                section{
+                    .seccion-cf,.seccion-wl,.seccion-pl{
+                        div{
+                            .info{
+                                width: 80%;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+    .carrete{
+        width: 80%;
+        img{
+            border-radius: 20px;
+        }
+    }
+    };
+    
+};
+
+@media only screen and (min-width: 1024px) {
+    
+    body{
+        main{
+            .contenedor{
+                    .galeria{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2,40%);
+        grid-template-rows: repeat(6,1fr);
+        grid-gap: 10px;
+        grid-template-areas: 
+            "alan alan"
+            "alan alan"
+            "mujer alancito"
+            "lupe hombre"
+            "jime jime"
+            "jime jime"    
+        ;
+    
+    .imagen1{
+        grid-area: alan;
+    }
+    
+    .imagen2{
+        grid-area: mujer;
+    }
+    
+    .imagen3{
+        grid-area: hombre;
+    }
+    
+    .imagen4{
+        grid-area: lupe;
+    }
+    
+    .imagen5{
+        grid-area: alancito;
+    }
+    
+    .imagen6{
+        grid-area: jime;
+    }
+    }}}
+    footer{
+        .redes{
+        display: flex;
+        justify-content: space-evenly;
+    }}
+}}

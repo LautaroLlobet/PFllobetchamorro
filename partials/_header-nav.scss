@@ -1,0 +1,69 @@
+body {
+    header{
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: rgb(243, 187, 2);
+    div{
+    @include flex(flex,row,space-between);
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        h1{
+            font-family: "ingra", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+        h2{
+            font-family: "ingra-condensed", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: black; 
+        }
+    }
+    .menubar{
+        display: flex;
+        justify-content: flex-end;
+
+        div .offcanvas{
+            background-color: rgba(243, 187, 2, 1);
+            h3,a{
+            font-family: "ingra-condensed", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+                
+            }
+            h3{
+                text-shadow: 1px 1px 3px white;
+                color: black;
+                font-size: 30px;
+            }
+            a{
+                text-shadow: 1px 1px 3px black;
+                color: white;
+                font-size: 20px;
+            }
+            a:hover{
+                color: black;
+                text-shadow: 1px 1px 3px white;
+                h3{
+                transform: scale(2);
+                transition: all 2s;}
+            }
+            .dropdown-menu{
+                background-color: black;
+                .dropdown-item{
+                    color: rgba(243, 187, 2, 1);
+                }
+                a:hover{
+                    background-color: orange;
+                    color: black;}
+            
+            }
+        }
+        }
+    
+}
+}
+}

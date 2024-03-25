@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: map-get($colores,fondopag);
+    color: white;
+}
+
+/*
+Fuentes añadidas:
+Ingra Regular
+font-family: "ingra", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Medium
+font-family: "ingra", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Bold
+font-family: "ingra", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra ExtraBold
+font-family: "ingra", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Book
+font-family: "ingra-2", sans-serif;
+font-weight: 300;
+font-style: normal;
+Ingra SemiBold
+font-family: "ingra-2", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Regular
+font-family: "ingra-condensed", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd Medium
+font-family: "ingra-condensed", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Bold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Cd ExtraBold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Cd Book
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd SemiBold
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+Ingra Wd Regular
+font-family: "ingra-wide", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd Medium
+font-family: "ingra-wide", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Wd Bold
+font-family: "ingra-wide", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Wd ExtraBold
+font-family: "ingra-wide", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Wd Book
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd SemiBold
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+*//*head y nav
+*/

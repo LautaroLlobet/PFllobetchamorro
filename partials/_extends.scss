@@ -1,0 +1,10 @@
+%flex-content-center{
+    display: flex;
+    justify-content: center;
+};
+
+%flex-center-end{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}

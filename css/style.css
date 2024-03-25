@@ -1,7 +1,4 @@
-@charset "UTF-8";
 @import url("https://use.typekit.net/bps6rzl.css");
-/*maps de colores*/
-/*extend*/
 .contenedor h4, body main .contenedor .row, body main .contenedor p {
   display: flex;
   justify-content: center;
@@ -13,7 +10,6 @@ body main .contenedor .cartas .carta-cf a div, body main .contenedor .cartas .ca
   align-items: flex-end;
 }
 
-/*mixings*/
 * {
   padding: 0;
   margin: 0;
@@ -94,9 +90,10 @@ body header div .menubar div .offcanvas .dropdown-menu a:hover {
   background-color: orange;
   color: black;
 }
-body header div .boton-menu:hover .navbar-toggler {
+
+.boton-menu:hover .navbar-toggler {
   border: 5px solid black;
-  scale: 1.2;
+  scale: 1.3;
   transition: all 1s;
 }
 
@@ -215,7 +212,6 @@ body main .contenedor .galeria .imagen6 {
   grid-area: jime;
 }
 
-/* hacer la pagina de crosfit y despues cambiarla al import de crft*/
 body main div section .seccion-cf {
   display: flex;
   flex-direction: row-reverse;
@@ -265,9 +261,6 @@ body .carrete .carousel-item:hover {
   transition-duration: 1s;
 }
 
-/*
-pagina weighlifting
-*/
 .seccion-wl {
   display: flex;
   flex-direction: row-reverse;
@@ -304,9 +297,6 @@ pagina weighlifting
   padding-left: 20px;
 }
 
-/*
-pagina powerlifting
-*/
 .seccion-pl {
   display: flex;
   flex-direction: row-reverse;
@@ -342,7 +332,11 @@ pagina powerlifting
   padding-left: 20px;
 }
 
-/* pagina sobre mi*/
+.videoyoutube {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
 .contenedor .info-perfil {
   width: 100%;
   display: flex;
@@ -369,12 +363,6 @@ pagina powerlifting
   font-style: normal;
 }
 
-.videoyoutube {
-  width: 100%;
-  aspect-ratio: 16/9;
-}
-
-/*la parte del footer*/
 body footer {
   max-width: 100%;
   margin-left: auto;
@@ -428,9 +416,6 @@ a.arriba:hover {
   transition-duration: 1s;
 }
 
-/*
-hacer media queries para cambiar los tamanios de los cuadros segun el tamanio de ventana sm md o lg
-*/
 @media only screen and (min-width: 768px) {
   body main div section .seccion-cf div .info, body main div section .seccion-wl div .info, body main div section .seccion-pl div .info {
     width: 80%;
@@ -477,80 +462,5 @@ hacer media queries para cambiar los tamanios de los cuadros segun el tamanio de
     justify-content: space-evenly;
   }
 }
-/*
-Fuentes añadidas:
-Ingra Regular
-font-family: "ingra", sans-serif;
-font-weight: 400;
-font-style: normal;
-Ingra Medium
-font-family: "ingra", sans-serif;
-font-weight: 500;
-font-style: normal;
-Ingra Bold
-font-family: "ingra", sans-serif;
-font-weight: 700;
-font-style: normal;
-Ingra ExtraBold
-font-family: "ingra", sans-serif;
-font-weight: 800;
-font-style: normal;
-Ingra Book
-font-family: "ingra-2", sans-serif;
-font-weight: 300;
-font-style: normal;
-Ingra SemiBold
-font-family: "ingra-2", sans-serif;
-font-weight: 500;
-font-style: normal;
-Ingra Cd Regular
-font-family: "ingra-condensed", sans-serif;
-font-weight: 400;
-font-style: normal;
-Ingra Cd Medium
-font-family: "ingra-condensed", sans-serif;
-font-weight: 500;
-font-style: normal;
-Ingra Cd Bold
-font-family: "ingra-condensed", sans-serif;
-font-weight: 700;
-font-style: normal;
-Ingra Cd ExtraBold
-font-family: "ingra-condensed", sans-serif;
-font-weight: 800;
-font-style: normal;
-Ingra Cd Book
-font-family: "ingra-condensed-2", sans-serif;
-font-weight: 400;
-font-style: normal;
-Ingra Cd SemiBold
-font-family: "ingra-condensed-2", sans-serif;
-font-weight: 600;
-font-style: normal;
-Ingra Wd Regular
-font-family: "ingra-wide", sans-serif;
-font-weight: 400;
-font-style: normal;
-Ingra Wd Medium
-font-family: "ingra-wide", sans-serif;
-font-weight: 500;
-font-style: normal;
-Ingra Wd Bold
-font-family: "ingra-wide", sans-serif;
-font-weight: 700;
-font-style: normal;
-Ingra Wd ExtraBold
-font-family: "ingra-wide", sans-serif;
-font-weight: 800;
-font-style: normal;
-Ingra Wd Book
-font-family: "ingram-wide-2", sans-serif;
-font-weight: 400;
-font-style: normal;
-Ingra Wd SemiBold
-font-family: "ingram-wide-2", sans-serif;
-font-weight: 600;
-font-style: normal;
-*/
 
 /*# sourceMappingURL=style.css.map */
