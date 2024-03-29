@@ -1,4 +1,6 @@
-/*la parte del main index*/
+/*index con un contenedor que incluye mixings y extends para trabajar los flex,
+uso de mapa de colores
+*/
 
 body {
     main{
@@ -32,13 +34,13 @@ body {
         .cartas{
             margin-top: 20px;
                 .carta-cf{
-                    background-image: url(../imagenes/crossfit/chica-barra.jpg);
+                    background-image: url(../imagenes/crossfit/chica-barra.webp);
                 }
                 .carta-wl{
-                    background-image: url(../imagenes/weighlifting/weightlifting.jpg);
+                    background-image: url(../imagenes/weighlifting/weightlifting.webp);
                 }
                 .carta-pw{
-                    background-image: url(../imagenes/powerlifting/deadlift-chica.jpg);
+                    background-image: url(../imagenes/powerlifting/deadlift-chica.webp);
                 }
                 .carta-cf,.carta-wl,.carta-pw{
                     height: 300px;

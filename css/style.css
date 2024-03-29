@@ -1,4 +1,11 @@
+@charset "UTF-8";
 @import url("https://use.typekit.net/bps6rzl.css");
+/*
+mapa de colores para usar en las paginas
+*/
+/*
+definicion de mixings para trabajar el flex con parametros
+*/
 .contenedor h4, body main .contenedor .row, body main .contenedor p {
   display: flex;
   justify-content: center;
@@ -10,6 +17,12 @@ body main .contenedor .cartas .carta-cf a div, body main .contenedor .cartas .ca
   align-items: flex-end;
 }
 
+/*
+extends para acortar el uso de codigo con flex
+*/
+/*
+propiedades para normalizar la pagina y linkeo de mapa de colores segun corresponde
+*/
 * {
   padding: 0;
   margin: 0;
@@ -21,7 +34,86 @@ body {
   color: white;
 }
 
-/*head y nav
+/*
+Fuentes añadidas:
+Ingra Regular
+font-family: "ingra", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Medium
+font-family: "ingra", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Bold
+font-family: "ingra", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra ExtraBold
+font-family: "ingra", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Book
+font-family: "ingra-2", sans-serif;
+font-weight: 300;
+font-style: normal;
+Ingra SemiBold
+font-family: "ingra-2", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Regular
+font-family: "ingra-condensed", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd Medium
+font-family: "ingra-condensed", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Cd Bold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Cd ExtraBold
+font-family: "ingra-condensed", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Cd Book
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Cd SemiBold
+font-family: "ingra-condensed-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+Ingra Wd Regular
+font-family: "ingra-wide", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd Medium
+font-family: "ingra-wide", sans-serif;
+font-weight: 500;
+font-style: normal;
+Ingra Wd Bold
+font-family: "ingra-wide", sans-serif;
+font-weight: 700;
+font-style: normal;
+Ingra Wd ExtraBold
+font-family: "ingra-wide", sans-serif;
+font-weight: 800;
+font-style: normal;
+Ingra Wd Book
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 400;
+font-style: normal;
+Ingra Wd SemiBold
+font-family: "ingram-wide-2", sans-serif;
+font-weight: 600;
+font-style: normal;
+*/ /*head y nav
+*/
+/*
+estructura del body, incluye mixings, 
+un encabeza con los titulos de la pagina,
+un menu de bootstrap con sus efectos de hover sobre sus elementos
 */
 body header {
   position: sticky;
@@ -91,13 +183,18 @@ body header div .menubar div .offcanvas .dropdown-menu a:hover {
   color: black;
 }
 
+/*
+propiedades de animacion para el boton de menu
+*/
 .boton-menu:hover .navbar-toggler {
   border: 5px solid black;
   scale: 1.3;
   transition: all 1s;
 }
 
-/*la parte del main index*/
+/*index con un contenedor que incluye mixings y extends para trabajar los flex,
+uso de mapa de colores
+*/
 body main .contenedor {
   width: 90%;
   margin: auto;
@@ -123,19 +220,20 @@ body main .contenedor p {
   font-family: "ingra-condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: black;
+  color: rgb(0, 0, 0);
+  font-size: large;
 }
 body main .contenedor .cartas {
   margin-top: 20px;
 }
 body main .contenedor .cartas .carta-cf {
-  background-image: url(../imagenes/crossfit/chica-barra.jpg);
+  background-image: url(../imagenes/crossfit/chica-barra.webp);
 }
 body main .contenedor .cartas .carta-wl {
-  background-image: url(../imagenes/weighlifting/weightlifting.jpg);
+  background-image: url(../imagenes/weighlifting/weightlifting.webp);
 }
 body main .contenedor .cartas .carta-pw {
-  background-image: url(../imagenes/powerlifting/deadlift-chica.jpg);
+  background-image: url(../imagenes/powerlifting/deadlift-chica.webp);
 }
 body main .contenedor .cartas .carta-cf, body main .contenedor .cartas .carta-wl, body main .contenedor .cartas .carta-pw {
   height: 300px;
@@ -212,6 +310,11 @@ body main .contenedor .galeria .imagen6 {
   grid-area: jime;
 }
 
+/*
+elementos de la pagina de crossfit, utilizando mixings, un video de instagram iframe
+contenedores e imagenes y un  carrusel de bootstrap, con efectos de zoom al hacerles hover
+uso del mapa de colores
+*/
 body main div section .seccion-cf {
   display: flex;
   flex-direction: row-reverse;
@@ -251,7 +354,6 @@ body .carrete {
   z-index: 0;
   margin: auto;
   margin-top: 20px;
-  border: white 10px solid;
 }
 body .carrete .carousel-item {
   border-radius: 20px;
@@ -261,6 +363,11 @@ body .carrete .carousel-item:hover {
   transition-duration: 1s;
 }
 
+/*
+elementos de la pagina de powerlifting, utilizando mixings, videos de instagram iframe
+contenedores e imagenes
+uso del mapa de colores
+*/
 .seccion-wl {
   display: flex;
   flex-direction: row-reverse;
@@ -297,6 +404,11 @@ body .carrete .carousel-item:hover {
   padding-left: 20px;
 }
 
+/*
+elementos de la pagina de powerlifting, utilizando mixings, videos de instagram iframe
+contenedores e imagenes
+uso del mapa de colores
+*/
 .seccion-pl {
   display: flex;
   flex-direction: row-reverse;
@@ -332,11 +444,18 @@ body .carrete .carousel-item:hover {
   padding-left: 20px;
 }
 
+/*
+video de youtube enlazado a las paginas de cf, wl y pl
+*/
 .videoyoutube {
   width: 100%;
   aspect-ratio: 16/9;
 }
 
+/*
+contenedor con imagen y descripcion de mi persona,
+uso de mapa de colores, y extend.
+*/
 .contenedor .info-perfil {
   width: 100%;
   display: flex;
@@ -416,6 +535,15 @@ a.arriba:hover {
   transition-duration: 1s;
 }
 
+/*
+estructura del arrow de volver arriba, con animacion de zoom y rotacion a la fecha
+*/
+/*
+mediaqueries para transformar el comportamiento de la informacion de las paginas cf, pw, y wl
+asi como tambien el tamaño del carrete de bootstrap para la reolucion de escritorio.
+Cambio del formato de la galeria de grid de la pagina index, y tambien cambios en resolucion del footer segun la pantalla.
+
+*/
 @media only screen and (min-width: 768px) {
   body main div section .seccion-cf div .info, body main div section .seccion-wl div .info, body main div section .seccion-pl div .info {
     width: 80%;

@@ -1,3 +1,9 @@
+/*
+elementos de la pagina de crossfit, utilizando mixings, un video de instagram iframe
+contenedores e imagenes y un  carrusel de bootstrap, con efectos de zoom al hacerles hover
+uso del mapa de colores
+*/
+
 body{
     main{
         div{
@@ -37,12 +43,13 @@ body{
         }
         }
     }
+
+
     .carrete{
         width: 100%;
         z-index: 0;
         margin: auto;
-        margin-top: 20px;
-        border: white 10px solid;        
+        margin-top: 20px;       
         .carousel-item{
             border-radius: 20px;
         }
